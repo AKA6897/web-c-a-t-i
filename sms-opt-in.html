@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Đăng ký nhận hỗ trợ qua SMS từ CuaTiemNho">
+    <title>SMS Opt-In - CuaTiemNho</title>
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏪</text></svg>">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">🏪 CuaTiemNho</a>
+
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html#home" class="nav-link">Trang chủ</a></li>
+                <li><a href="index.html#services" class="nav-link">Dịch vụ</a></li>
+                <li><a href="index.html#features" class="nav-link">Tính năng</a></li>
+                <li><a href="index.html#contact" class="nav-link">Liên hệ</a></li>
+                <li><a href="privacy.html" class="nav-link">Privacy Policy</a></li>
+                <li><a href="sms-opt-in.html" class="btn btn-primary">SMS Opt-In</a></li>
+            </ul>
+
+            <div class="menu-toggle" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- SMS Opt-In Section -->
+    <section class="section" style="padding-top: 120px; min-height: 100vh;">
+        <div class="container">
+            <div class="form-container card fade-in">
+                <div class="text-center" style="margin-bottom: var(--spacing-xl);">
+                    <div style="font-size: 4rem; margin-bottom: var(--spacing-md);">💬</div>
+                    <h1>Đăng Ký SMS Opt-In</h1>
+                    <p style="color: var(--color-text-secondary); font-size: 1.1rem;">
+                        Nhận hỗ trợ khách hàng nhanh chóng và tiện lợi qua tin nhắn SMS
+                    </p>
+                </div>
+
+                <form id="smsOptInForm">
+                    <div class="form-group">
+                        <label for="name">Họ và Tên *</label>
+                        <input type="text" id="name" name="name" placeholder="Nhập họ và tên của bạn" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Số Điện Thoại *</label>
+                        <input type="tel" id="phone" name="phone" placeholder="0912345678 hoặc +84912345678" required>
+                        <small style="color: var(--color-text-muted); display: block; margin-top: var(--spacing-xs);">
+                            Nhập số điện thoại Việt Nam hợp lệ
+                        </small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email (Tùy chọn)</label>
+                        <input type="email" id="email" name="email" placeholder="email@example.com">
+                    </div>
+
+                    <!-- Information Box -->
+                    <div class="card"
+                        style="background: rgba(102, 126, 234, 0.1); border-color: var(--color-primary); margin-bottom: var(--spacing-lg);">
+                        <h3 style="font-size: 1.2rem; margin-bottom: var(--spacing-sm);">
+                            📋 Thông Tin Quan Trọng
+                        </h3>
+                        <ul style="margin-left: var(--spacing-md); color: var(--color-text-secondary);">
+                            <li>Chúng tôi chỉ sử dụng SMS để hỗ trợ khách hàng</li>
+                            <li>KHÔNG gửi tin nhắn quảng cáo hoặc marketing</li>
+                            <li>Bạn có thể hủy đăng ký bất kỳ lúc nào bằng cách gửi "STOP"</li>
+                            <li>Tin nhắn chỉ được gửi khi bạn yêu cầu hỗ trợ</li>
+                            <li>Thông tin của bạn được bảo mật tuyệt đối</li>
+                        </ul>
+                    </div>
+
+                    <!-- Consent Checkbox -->
+                    <div class="form-group">
+                        <div class="checkbox-group">
+                            <input type="checkbox" id="consent" name="consent" required>
+                            <label for="consent">
+                                Tôi đồng ý nhận tin nhắn SMS hỗ trợ khách hàng từ CuaTiemNho.
+                                Tôi hiểu rằng tôi có thể hủy đăng ký bất kỳ lúc nào bằng cách gửi "STOP".
+                                Tôi đã đọc và đồng ý với
+                                <a href="privacy.html" target="_blank" style="color: var(--color-primary);">
+                                    Chính Sách Bảo Mật
+                                </a>.
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: var(--spacing-md);">
+                        Đăng Ký Ngay
+                    </button>
+
+                    <!-- COMPLIANCE: English Mandatory Text -->
+                    <div
+                        style="margin-top: var(--spacing-lg); padding: var(--spacing-sm); border: 1px dashed var(--color-text-muted); border-radius: var(--radius-sm); font-size: 0.8rem; color: var(--color-text-secondary); background: rgba(0,0,0,0.02);">
+                        <p style="margin-bottom: 5px; font-weight: bold;">Important Information:</p>
+                        <p style="margin-bottom: 5px;">By providing your number, you agree to receive support messages.
+                            <strong>Message and data rates may apply.</strong> Message frequency varies.</p>
+                        <p><strong>Reply STOP to opt out. Reply HELP for assistance.</strong></p>
+                    </div>
+                </form>
+
+                <!-- Additional Info -->
+                <div class="text-center"
+                    style="margin-top: var(--spacing-xl); padding-top: var(--spacing-lg); border-top: 1px solid var(--glass-border);">
+                    <p style="color: var(--color-text-muted); font-size: 0.9rem;">
+                        Bằng cách đăng ký, bạn xác nhận rằng số điện thoại thuộc quyền sở hữu của bạn
+                        và bạn đồng ý nhận tin nhắn SMS từ CuaTiemNho.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Benefits Section -->
+            <div class="grid grid-3" style="margin-top: var(--spacing-3xl);">
+                <div class="card text-center fade-in">
+                    <div style="font-size: 3rem; margin-bottom: var(--spacing-md);">⚡</div>
+                    <h3>Phản Hồi Nhanh</h3>
+                    <p>Nhận hỗ trợ ngay lập tức qua tin nhắn SMS</p>
+                </div>
+
+                <div class="card text-center fade-in">
+                    <div style="font-size: 3rem; margin-bottom: var(--spacing-md);">🔒</div>
+                    <h3>Bảo Mật</h3>
+                    <p>Thông tin của bạn được bảo vệ tuyệt đối</p>
+                </div>
+
+                <div class="card text-center fade-in">
+                    <div style="font-size: 3rem; margin-bottom: var(--spacing-md);">✅</div>
+                    <h3>Không Spam</h3>
+                    <p>Chỉ nhận tin nhắn hỗ trợ, không quảng cáo</p>
+                </div>
+            </div>
+
+            <!-- FAQ Section -->
+            <div style="max-width: 800px; margin: var(--spacing-3xl) auto 0;">
+                <h2 class="text-center fade-in">Câu Hỏi Thường Gặp</h2>
+
+                <div class="card fade-in" style="margin-top: var(--spacing-xl);">
+                    <h3 style="color: var(--color-primary);">Tôi sẽ nhận được loại tin nhắn nào?</h3>
+                    <p>
+                        Bạn chỉ nhận tin nhắn phản hồi cho các yêu cầu hỗ trợ do bạn khởi tạo,
+                        hỗ trợ liên quan đến tài khoản, và hỗ trợ yêu cầu dịch vụ.
+                        Chúng tôi KHÔNG gửi tin nhắn quảng cáo.
+                    </p>
+                </div>
+
+                <div class="card fade-in">
+                    <h3 style="color: var(--color-primary);">Làm thế nào để hủy đăng ký?</h3>
+                    <p>
+                        Bạn có thể hủy đăng ký bất kỳ lúc nào bằng cách gửi tin nhắn "STOP" hoặc "HUY"
+                        đến số của chúng tôi. Bạn sẽ nhận được xác nhận hủy đăng ký ngay lập tức.
+                    </p>
+                </div>
+
+                <div class="card fade-in">
+                    <h3 style="color: var(--color-primary);">Có mất phí không?</h3>
+                    <p>
+                        Dịch vụ SMS của chúng tôi hoàn toàn miễn phí. Tuy nhiên, nhà mạng của bạn
+                        có thể tính phí tin nhắn và dữ liệu theo gói cước của bạn.
+                    </p>
+                </div>
+
+                <div class="card fade-in">
+                    <h3 style="color: var(--color-primary);">Thông tin của tôi có được bảo mật không?</h3>
+                    <p>
+                        Có. Chúng tôi cam kết bảo vệ thông tin cá nhân của bạn với các tiêu chuẩn
+                        bảo mật cao nhất. Vui lòng xem
+                        <a href="privacy.html" style="color: var(--color-primary);">Chính Sách Bảo Mật</a>
+                        để biết thêm chi tiết.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 class="logo">🏪 CuaTiemNho</h3>
+                    <p>
+                        Cung cấp dịch vụ phần mềm và hỗ trợ khách hàng
+                        chuyên nghiệp qua tin nhắn SMS.
+                    </p>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Liên Kết Nhanh</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html#home">Trang chủ</a></li>
+                        <li><a href="index.html#services">Dịch vụ</a></li>
+                        <li><a href="index.html#features">Tính năng</a></li>
+                        <li><a href="index.html#contact">Liên hệ</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Chính Sách</h4>
+                    <ul class="footer-links">
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="sms-opt-in.html">SMS Opt-In</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 CuaTiemNho. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
